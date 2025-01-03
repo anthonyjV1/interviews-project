@@ -7,9 +7,12 @@ from gtts import gTTS
 import pathlib
 import pygame
 
+#Change according to person
+Username = "Philip Ventura"
+
 #Play audio file
 def ai_voice():
-    folder_path = r'C:\Users\Philip Ventura\Desktop\Sound'
+    folder_path = rf'C:\Users\{Username}\Desktop\Python code\Interview App\interviews-project\Sound'
     count = 0
     sound_file = None  
     

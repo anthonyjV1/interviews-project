@@ -57,3 +57,4 @@ def get_audio():
     return answer
 
 ai_voice()
+get_audio()

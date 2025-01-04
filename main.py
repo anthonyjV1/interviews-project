@@ -12,7 +12,7 @@ def ai_voice():
     pygame.mixer.init()
     start = input('Type start to start: ').strip().lower()
 
-    if start == 'start':
+    if start == 'start': #start interview process
         for path in pathlib.Path(folder_path).iterdir():
             if path.is_file() and path.suffix in {'.mp3', '.wav'}: 
                 sound_file = str(path)
@@ -21,15 +21,15 @@ def ai_voice():
             while True:
                 n = input("Type 'start' to start, 'pause' to pause, or 'next' to move to next question: ").strip().lower()
                 if n == "start":
-                    pygame.mixer_music.play()
+                    pygame.mixer_music.play() #Unpause audio
                 elif n == "pause":
-                    pygame.mixer_music.pause()
+                    pygame.mixer_music.pause() #Pause audio
                 elif n == "next":
                     pygame.mixer_music.stop()
                     break  # Exit the loop
                 else:
                     print("Invalid input. Try again.")
-        
+        #TO DO: figure out how to make it your turn after each question.
 
 def get_audio():
     print('Your turn')

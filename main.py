@@ -5,14 +5,13 @@ import time
 import playsound
 from gtts import gTTS
 import pathlib
-import pygame
 
 #Change according to person
 Username = "Philip Ventura"
 
 #Play audio file
 def ai_voice():
-    folder_path = rf'C:\Users\{Username}\Desktop\Python code\Interview App\interviews-project\Sound'
+    folder_path = ('Sound')
     count = 0
     sound_file = None  
     
@@ -43,14 +42,9 @@ def ai_voice():
         else:
             print("Invalid input. Try again.")
 
-#Google Ai voice
-#def interviewer(text):
-#    tts = gTTS(text=text)
-#    filename = "voice.mp3"
-#    tts.save(filename)
-#    playsound.playsound(filename)
 
 def get_audio():
+    print('Your turn')
     r = sr.Recognizer()
     with sr.Microphone() as source:
         audio = r.listen(source)
